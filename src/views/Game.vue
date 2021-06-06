@@ -1,39 +1,25 @@
 <template>
   <v-container fill-height>
     <v-row>
+      <v-col cols="12">
+        <h3 class="text-h3 text-center white--text">
+          Robotek Engeener Examen
+        </h3>
+      </v-col>
       <v-col>
-        <v-card color="white" max-width="600px">
-          <v-card-title>Robotek License Examen</v-card-title>
-          <v-card-subtitle>Rules</v-card-subtitle>
-          <v-card-text>
-            Blablabla
-            Blablablabl
-          </v-card-text>
-          <v-card-text>
-            Blablabla
-            Blablablabl
-          </v-card-text>
-          <v-card-text>
-            Blablabla
-            Blablablabl
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="primary">Start</v-btn>
-          </v-card-actions>
-        </v-card>
-        
+        <StepManager />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import StepManager from '@/components/StepManager'
 export default {
-  name: 'Game'
+  name: 'Game',
+  components: { StepManager },
+  data: () => ({
+    step: 1
+  })
 }
 </script>
-
-<style>
-
-</style>
